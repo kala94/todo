@@ -2,7 +2,6 @@ let a=[];
 window.onload=()=>
 {
   let arr=JSON.parse(localStorage.getItem("todo"))||[];
-
   console.log(arr);
   for(let i=0;i<arr.length;i++)
   {
@@ -13,9 +12,16 @@ function submit()
 {
   let m=document.getElementById("todo");
   console.log(m.value);
-  a.push(m.value);
-  addlist(m.value);
-  m.value=" ";
+  if(m.value==" ")
+  {
+	alert("Give any data");
+  }
+  else
+  {
+    a.push(m.value);
+    addlist(m.value);
+    m.value=" ";
+  }
 }
 function addlist(n)
 {
