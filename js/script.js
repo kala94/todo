@@ -12,17 +12,17 @@ function submit()
 {
   let m=document.getElementById("todo");
   console.log(m.value);
-  if(m.value==" ")
+  if(m.value=="")
   {
 	alert("Give any data");
   }
-  else
+  else 
   {
     a.push(m.value);
     addlist(m.value);
-    m.value=" ";
+    m.value="";
   }
-}
+ }
 function addlist(n)
 {
   let l=document.getElementById("list");
